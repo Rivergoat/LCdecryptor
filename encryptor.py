@@ -28,11 +28,18 @@ def writeToFile(text, filename = "scrtxt.txt"):
     txt.write(text)
     txt.close()
 
+def linesOfFile(filename):
+    with open(filename) as f:
+        for i, l in enumerate(f):
+            pass
+
+    return i + 1
+
 def readFromFile(filename = "txt.txt", printInfo = False):
     txt = open(filename, "r")
     content = " "
     counter = 1
-    for i in (txt):
+    for i in range(linesOfFile(filename)):
         content += txt.readline()
         if printInfo == True: print("Successfully read line", counter)
         counter += 1
