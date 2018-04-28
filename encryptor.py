@@ -43,7 +43,6 @@ def readFromFile(filename = "txt.txt", printInfo = False):
         content += txt.readline()
         if printInfo == True: print("Successfully read line", counter)
         counter += 1
-        time.sleep(0.003)
     txt.close()
 
     return content
