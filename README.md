@@ -1,0 +1,2 @@
+# LCdecryptor
+This is an algorithm to encrypt text files, that are just encrypted by changing the letters in some way. For example changing every letter to the next in the alphabet. The program will use the different frequency of the letters. This will not be the must efficient method. Using a dictionary would be must better. The encrypted text needs to be long to ensure that the frequency matches the average.
