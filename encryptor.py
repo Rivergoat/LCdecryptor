@@ -1,7 +1,7 @@
 import time
 
 def nextAlphabetLetter(text = "test"):
-    letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","a","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","Q","Y","Z","A"]
+    letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","a","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","A"]
     newText = " "
     foundMatch = False
 
@@ -23,7 +23,7 @@ def nextAlphabetLetter(text = "test"):
 
 testText = "abc"
 
-def writeToFile(text, filename = "scrtxt.txt"):
+def writeToFile(text, filename = "encryptedtxt.txt"):
     txt = open(filename, "w")
     txt.write(text)
     txt.close()
@@ -40,7 +40,7 @@ def readFromFile(filename = "txt.txt", printInfo = False):
     content = " "
     for i in range(linesOfFile(filename)):
         content += txt.readline()
-        if printInfo == True: print("Successfully read line", i+1)
+        if printInfo == True: print("Successfully read line", i+1, "in", filename)
         #time.sleep(0.001)
     txt.close()
 
