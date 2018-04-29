@@ -9,4 +9,4 @@ encryptedtxt.txt    is the file containing the encrypted text. (It will be a enc
 txt.txt             is a file containing a text to get the data about the occurrence of the letters. (I will get the content manually at first, but I may automate that by using some API to access a big amount of text at once.)
 
 decrypor.py         is the decryptor, which will use txt.txt and scrtxt.txt and generate a  unscrtxt.txt with the best guess inside.
-decryptedtxt.txt    is the output of decryptor.
+decryptedtxt.txt    is the output of decryptor.py.
