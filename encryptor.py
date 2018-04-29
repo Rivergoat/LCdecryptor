@@ -38,11 +38,10 @@ def linesOfFile(filename):
 def readFromFile(filename = "txt.txt", printInfo = False):
     txt = open(filename, "r")
     content = " "
-    counter = 1
     for i in range(linesOfFile(filename)):
         content += txt.readline()
-        if printInfo == True: print("Successfully read line", counter)
-        counter += 1
+        if printInfo == True: print("Successfully read line", i+1)
+        #time.sleep(0.001)
     txt.close()
 
     return content
