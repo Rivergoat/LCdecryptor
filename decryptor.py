@@ -1,5 +1,5 @@
 def countLetterFrequency(text = "test"):
-    letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","Q","Y","Z"]
+    letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     occurrence = []
 
     for i in range(26 * 2):
@@ -42,7 +42,7 @@ def decrypt():
     translator1Letters = []
     translator2Letters = []
 
-    for i in range(26 * 2):
+    for i in range(len(letters)):
         translator1Letters.append("placeholder")
         translator2Letters.append("placeholder")
 
@@ -54,11 +54,11 @@ def decrypt():
     orderInEncrpdTxt = []
     orderInSampleTxt = []
 
-    for i in range(26 * 2):
+    for i in range(len(letters)):
         biggestFound = 0
         itsNumber = 0
 
-        for l in range(26 * 2):
+        for l in range(len(letters)):
             if occurenceInEncrpdTxt[l] > biggestFound:
                 itsNumber = l
                 biggestFound = occurenceInEncrpdTxt[l]
@@ -66,11 +66,11 @@ def decrypt():
         occurenceInEncrpdTxt[itsNumber] = 0
         orderInEncrpdTxt.append(itsNumber)
 
-    for i in range(26 * 2):
+    for i in range(len(letters)):
         biggestFound = 0
         itsNumber = -1
 
-        for l in range(26 * 2):
+        for l in range(len(letters)):
             if occurenceInSampleTxt[l] > biggestFound:
                 itsNumber = l
                 biggestFound = occurenceInSampleTxt[l]
@@ -78,12 +78,12 @@ def decrypt():
         occurenceInSampleTxt[itsNumber] = 0
         orderInSampleTxt.append(itsNumber)
 
-    for i in range(26 * 2):
+    for i in range(len(letters)):
         ithLetterInSample = letters[orderInSampleTxt[i]]
 
         itsNumberInEncprd = 0
 
-        for l in range(26 * 2):
+        for l in range(len(letters)):
             if letters[orderInEncrpdTxt[l]] == ithLetterInSample:
                 itsNumberInEncprd = l
                 break
@@ -91,7 +91,7 @@ def decrypt():
         translator1Letters[itsNumberInEncprd] = letters[orderInSampleTxt[i]]
         letters
 
-    for i in range(26 * 2):
+    for i in range(len(letters)):
         translator2Letters[i] = letters[orderInSampleTxt[i]]
 
     foundMatch = False
